@@ -1,12 +1,15 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { get } from 'lodash'
 import { Container } from 'react-responsive-grid'
 
 import { rhythm, scale } from '../utils/typography'
 
 class Template extends React.Component {
   render() {
-    const { location, children } = this.props
+    const { location, children, data } = this.props
+    console.log("HHHHHHHHh", data)
+    const siteHeader = get(data, 'site.siteMetadata.header')
     let header
 
     let rootPath = `/`
@@ -31,7 +34,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            {siteHeader}
           </Link>
         </h1>
       )
@@ -60,7 +63,7 @@ class Template extends React.Component {
     return (
       <Container
         style={{
-          maxWidth: rhythm(30),
+          maxWidth: rhythm(24),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
@@ -70,5 +73,15 @@ class Template extends React.Component {
     )
   }
 }
+
+export const query = graphql`
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        header
+      }
+    }
+  }
+`
 
 export default Template
