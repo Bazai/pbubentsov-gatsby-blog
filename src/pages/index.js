@@ -19,7 +19,11 @@ class BlogIndex extends React.Component {
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
-            <div key={node.fields.slug}>
+            <div
+              key={node.fields.slug}
+              style={{ marginBottom: rhythm(1)}}
+            >
+              <small className="post-date">{node.frontmatter.date}</small>
               <h2
                 style={{
                   marginTop: 0,
@@ -31,8 +35,10 @@ class BlogIndex extends React.Component {
                 </Link>
               </h2>
               <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <p
+                dangerouslySetInnerHTML={{ __html: node.excerpt }}
+                style={{ marginBottom: 0}}
+              />
             </div>
           )
         })}
@@ -63,7 +69,7 @@ export const pageQuery = graphql`
             title
             featuredImage {
                 childImageSharp{
-                    sizes(maxWidth: 1000) {
+                    sizes(maxWidth: 1024, quality: 90) {
                         ...GatsbyImageSharpSizes
                     }
                 }

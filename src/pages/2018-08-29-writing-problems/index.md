@@ -1,7 +1,7 @@
 ---
 path: "/writing-problems"
-featuredImage: "./muki-tvorchestva-featured.png"
-date: "2018-08-29T12:00:00.000Z"
+featuredImage: "./featured-image.jpg"
+date: "2018-08-29"
 title: "Две писательских проблемы и их причины"
 tags: ['Тексты']
 excerpt: "Две писательских проблемы и их причины"

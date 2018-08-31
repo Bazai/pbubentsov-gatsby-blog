@@ -10,6 +10,7 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const siteMotto = get(this.props, 'data.site.siteMetadata.motto')
 
     return (
       <div>
@@ -32,7 +33,7 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         />
-        <Bio />
+        <Bio motto={siteMotto} showName />
       </div>
     )
   }
@@ -45,6 +46,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        motto
         author
       }
     }
@@ -56,7 +58,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         featuredImage {
             childImageSharp{
-                sizes(maxWidth: 630) {
+                sizes(maxWidth: 1024, quality: 90) {
                     ...GatsbyImageSharpSizes
                 }
             }

@@ -8,8 +8,13 @@ import { rhythm, scale } from '../utils/typography'
 class Template extends React.Component {
   render() {
     const { location, children, data } = this.props
-    console.log("HHHHHHHHh", data)
     const siteHeader = get(data, 'site.siteMetadata.header')
+
+    const linkStyle = {
+      boxShadow: 'none',
+      textDecoration: 'none',
+      color: 'inherit'
+    }
     let header
 
     let rootPath = `/`
@@ -26,14 +31,7 @@ class Template extends React.Component {
             marginTop: 0,
           }}
         >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
+          <Link to={'/'}>
             {siteHeader}
           </Link>
         </h1>
@@ -42,20 +40,12 @@ class Template extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: 'Montserrat, sans-serif',
             marginTop: 0,
             marginBottom: rhythm(-1),
           }}
         >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            Gatsby Starter Blog
+          <Link to={'/'}>
+            {siteHeader}
           </Link>
         </h3>
       )
