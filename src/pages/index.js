@@ -64,7 +64,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            path
             date(formatString: "DD.MM.YYYY")
             title
             featuredImage {

@@ -1,5 +1,4 @@
 ---
-path: "/find-a-job-tips"
 featuredImage: "./featured-image.png"
 date: "2018-08-23T19:00:00.000Z"
 title: "Как найти работу быстрее. 15 советов карьерного консультанта"

@@ -1,5 +1,4 @@
 ---
-path: "/writing-problems"
 featuredImage: "./featured-image.jpg"
 date: "2018-08-29"
 title: "Две писательских проблемы и их причины"

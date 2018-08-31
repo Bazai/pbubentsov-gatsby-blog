@@ -1,5 +1,4 @@
 ---
-path: "/gtd-is-broken"
 featuredImage: "./featured-image.png"
 date: "2018-08-17T19:00:00.000Z"
 title: "GTD Сломан"
