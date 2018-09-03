@@ -27,10 +27,8 @@
     "lodash": "^4.17.5",
     "react-responsive-grid": "^0.3.4",
     "typeface-merriweather": "0.0.43",
-    "typeface-montserrat": "0.0.43",
-    "typography-theme-wordpress-2015": "^0.15.10",
-    "typography-theme-wordpress-2016": "^0.15.10"
-  },
+    "typography-theme-wordpress-2015": "^0.15.10"
+  }
   "devDependencies": {
     "eslint": "^4.11.0",
     "eslint-plugin-react": "^7.5.1",

@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 // Import typefaces
-import 'typeface-montserrat'
 import 'typeface-merriweather'
 
 import profilePic from './bazzy_60x60.png'
